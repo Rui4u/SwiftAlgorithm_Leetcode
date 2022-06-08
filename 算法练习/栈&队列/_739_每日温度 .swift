@@ -8,10 +8,31 @@
 import Foundation
 
 /// https://leetcode.cn/problems/daily-temperatures/
-/// 思想: 利用单调栈 单调递减
 class _739_每日温度 {
-    
+    /// 思想: 利用倒推法  从后向前找比自己大的值, 这样可以利用找到的结果进行运算,避免重复运算
     func dailyTemperatures(_ temperatures: [Int]) -> [Int] {
+
+        var result = Array(repeating: 0, count: temperatures.count)
+        for i in (0..<temperatures.count - 1).reversed() {
+            var j = i + 1
+            while true {
+                if temperatures[i] < temperatures[j] {
+                    result[i] = j - i
+                    break
+                } else if result[j] == 0 {
+                    break
+                } else if temperatures[i] == temperatures[j] {
+                    result[i] = result[j] + j - i
+                    break
+                }else {
+                    j = j + result[j]
+                }
+            }
+        }
+        return result
+    }
+    /// 思想: 利用单调栈 单调递减
+    func dailyTemperatures2(_ temperatures: [Int]) -> [Int] {
         var stack = [(Int,Int)]()  // 角标和值
         var result = Array(repeating: 0, count: temperatures.count)
         var index = 0
