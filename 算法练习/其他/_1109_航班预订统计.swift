@@ -34,6 +34,7 @@ class _1109_航班预订统计 {
             orgin[i] = diff[i] + orgin[i - 1]
         }
         
+        
         return orgin
     }
 }
