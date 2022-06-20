@@ -30,7 +30,6 @@ class _200_岛屿数量 {
                 }
             }
         }
-        finded.removeFirst()(at: <#T##Int#>)
         return maxValue
     }
 
