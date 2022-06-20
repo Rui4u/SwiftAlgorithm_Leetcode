@@ -33,6 +33,7 @@ class _654_最大二叉树 {
         guard left < right else {
             return nil
         }
+        
         let rootIndex = findMaxValue(nums, left: left, right: right)
         let root = TreeNode(nums[rootIndex])
         root.left = construct(nums, left: left, right: rootIndex)

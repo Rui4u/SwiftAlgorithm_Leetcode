@@ -57,4 +57,93 @@ import Foundation
 //_剑指Offer_II_099_最小路径之和().minPathSum([[1,3,1],[1,5,1],[4,2,1]])
 //AllSort().fastSort([-74,48,-20,2,10,-84,-5,4,5,2,1])
 //_42_接雨水().trap([0,1,0,2,1,0,1,3,2,1,2,1])
-_5_最长回文子串().longestPalindrome("abceqdddfsdf")
+//_5_最长回文子串().longestPalindrome("abceqdddfsdf")
+
+
+test().numIslands([
+    ["1","1","1","1","0"],
+    ["1","1","0","1","0"],
+    ["1","1","0","0","0"],
+    ["0","0","0","0","0"]
+  ]
+)
+var list = [[Int]]()
+func binaryTreePaths(_ root: TreeNode?) -> [String] {
+    var list = [Int]()
+    var result = [[Int]]()
+    findTree(root,list:&list, result:&result)
+    print(result)
+    return [""]
+}
+
+func findTree(_ root: TreeNode?, list: inout [Int], result: inout [[Int]]) {
+    if  root == nil {
+        return
+    }
+
+
+    if root?.left == nil && root?.right == nil {
+        list = [Int]()
+        list.append(root!.val)
+        result.append(list)
+    } else {
+        findTree(root?.left, list:&list, result:&result)
+        findTree(root?.right,list:&list, result: &result)
+    }
+}
+
+class test {
+    var record : [[Bool]]!
+    var finded: [[Bool]]!
+    var maxValue = 0
+    
+    func numIslands(_ grid: [[Character]]) -> Int {
+        if grid.count == 0 {
+            return 0
+        }
+        record = Array(repeating: Array(repeating: false, count: grid.first!.count), count: grid.count)
+        finded = Array(repeating: Array(repeating: false, count: grid.first!.count), count: grid.count)
+        
+        for i in 0..<grid.count {
+            for j in 0..<grid[i].count {
+                let current = grid[i][j]
+                if current == "1" {
+                    if !record[i][j] {
+                        find(i:i,j:j, grid:grid)
+                        maxValue = maxValue + 1
+                    }
+                }
+            }
+        }
+        return maxValue
+    }
+
+
+    func find(i: Int, j: Int, grid:[[Character]]) {
+        guard i >= 0 && j >= 0 else {
+            return
+        }
+        guard i < grid.count else {
+            return
+        }
+        guard j < grid[i].count else {
+            return
+        }
+
+        
+        if grid[i][j] == "1" {
+            record[i][j] = true
+        } else {
+            return
+        }
+        
+        if finded[i][j] {
+            return
+        }
+        finded[i][j] = true
+        find(i: i, j:j + 1, grid:grid)
+        find(i: i, j:j - 1, grid:grid)
+        find(i: i + 1, j:j, grid:grid)
+        find(i: i - 1, j:j, grid:grid)
+    }
+}
