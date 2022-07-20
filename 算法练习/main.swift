@@ -61,3 +61,40 @@ import Foundation
 _395_至少有K个重复字符的最长子串().longestSubstring("adsfdsf", 2)
 
 
+class Solution {
+    func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
+        let newHeader = ListNode()
+        var currentHeader: ListNode? = newHeader
+        var currentOrginHeader = head
+        var tailNode: ListNode? = newHeader
+        var cheakNode: ListNode? = head
+        var i = 0
+        let j = i + k - 1
+        while i < j {
+            cheakNode = cheakNode?.next
+            i = i + 1
+        }
+        i = 0
+        while (currentOrginHeader != nil) {
+            if i % k == 0 {
+                while (tailNode?.next != nil) {
+                    tailNode = tailNode?.next
+                }
+                currentHeader = tailNode
+                if cheakNode == nil {
+                    tailNode?.next = currentOrginHeader
+                    break
+                }
+            }
+            let temp2 = currentOrginHeader?.next
+            let temp = currentHeader?.next
+            currentHeader?.next = currentOrginHeader
+            currentOrginHeader?.next = temp
+            currentOrginHeader = temp2
+
+            cheakNode = cheakNode?.next
+            i = i + 1
+        }
+        return newHeader.next
+    }
+}

@@ -57,6 +57,7 @@
 		5548784B285C15FD00B25AF1 /* _200_岛屿数量.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548784A285C15FD00B25AF1 /* _200_岛屿数量.swift */; };
 		5548784D285C1EC900B25AF1 /* _剑指Offer_59_I_滑动窗口的最大值.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548784C285C1EC900B25AF1 /* _剑指Offer_59_I_滑动窗口的最大值.swift */; };
 		556676482852F90100BC4198 /* 42_接雨水.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556676472852F90100BC4198 /* 42_接雨水.swift */; };
+		5567A62828880632008C2283 /* _25_K个一组翻转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567A62728880632008C2283 /* _25_K个一组翻转链表.swift */; };
 		559C29EC2861674B00618099 /* _376_摆动序列.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C29EB2861674B00618099 /* _376_摆动序列.swift */; };
 		559C29EE2861688800618099 /* _516_最长回文子序列.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C29ED2861688800618099 /* _516_最长回文子序列.swift */; };
 		559C29F12862ADD400618099 /* _11_盛水最多的容器.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C29F02862ADD400618099 /* _11_盛水最多的容器.swift */; };
@@ -137,6 +138,7 @@
 		5548784A285C15FD00B25AF1 /* _200_岛屿数量.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_200_岛屿数量.swift"; sourceTree = "<group>"; };
 		5548784C285C1EC900B25AF1 /* _剑指Offer_59_I_滑动窗口的最大值.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_剑指Offer_59_I_滑动窗口的最大值.swift"; sourceTree = "<group>"; };
 		556676472852F90100BC4198 /* 42_接雨水.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "42_接雨水.swift"; sourceTree = "<group>"; };
+		5567A62728880632008C2283 /* _25_K个一组翻转链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_25_K个一组翻转链表.swift"; sourceTree = "<group>"; };
 		559C29EB2861674B00618099 /* _376_摆动序列.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_376_摆动序列.swift"; sourceTree = "<group>"; };
 		559C29ED2861688800618099 /* _516_最长回文子序列.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_516_最长回文子序列.swift"; sourceTree = "<group>"; };
 		559C29F02862ADD400618099 /* _11_盛水最多的容器.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_11_盛水最多的容器.swift"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				2B3EEEF528465C00007CDF9B /* _160_相交链表.swift */,
 				2B3EEEF128465BBF007CDF9B /* _234_回文链表.swift */,
 				2B3EEEF328465BE7007CDF9B /* _86_分隔链表.swift */,
+				5567A62728880632008C2283 /* _25_K个一组翻转链表.swift */,
 			);
 			path = "链表";
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				2B3EEEF028465B75007CDF9B /* _102_二叉树的层序遍历.swift in Sources */,
 				55CA03C32851C49C000B53AB /* _1094_拼车.swift in Sources */,
 				55ED294B2862B89D005A5E99 /* 71_简化路径.swift in Sources */,
+				5567A62828880632008C2283 /* _25_K个一组翻转链表.swift in Sources */,
 				55ED294F2862FE3F005A5E99 /* _22_括号生成.swift in Sources */,
 				55CA03D12851C49C000B53AB /* _283_移动零.swift in Sources */,
 				55E0ADEF287D0A4F002F9D9E /* _395_至少有K个重复字符的最长子串.swift in Sources */,
