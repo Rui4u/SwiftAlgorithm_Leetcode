@@ -21,8 +21,9 @@ class _5_最长回文子串 {
             dp[i][i] = true
         }
         let sArray = s.map{String($0)}
-        for j in 0..<s.count {
-            for i in 0..<j {
+        let n = sArray.count
+        for i in (0..<n - 1).reversed() {
+            for j in (i + 1)..<n {
                 if sArray[i] != sArray[j] {
                     dp[i][j] = false
                 } else if j - i < 3 {
