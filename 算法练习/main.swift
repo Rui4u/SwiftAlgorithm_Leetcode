@@ -57,4 +57,7 @@ import Foundation
 //_剑指Offer_II_099_最小路径之和().minPathSum([[1,3,1],[1,5,1],[4,2,1]])
 //AllSort().fastSort([-74,48,-20,2,10,-84,-5,4,5,2,1])
 //_42_接雨水().trap([0,1,0,2,1,0,1,3,2,1,2,1])
-_5_最长回文子串().longestPalindrome("abceqdddfsdf")
+//_5_最长回文子串().longestPalindrome("abceqdddfsdf")
+//_123_买卖股票的最佳时机().maxProfit([1,2,3,4,5])
+//_4_寻找两个正序数组的中位数().findMedianSortedArrays([2], [])
+_三数之和().threeSum([3,0,-2,-1,1,2])

@@ -41,3 +41,34 @@ class _75_颜色分类 {
         nums[j] = temp
     }
 }
+
+class _三数之和 {
+    func threeSum(_ nums2: [Int]) -> [[Int]] {
+        var nums = nums2.sorted()
+        var result = [[Int]]()
+        let n = nums.count
+        print(nums)
+        for a in 0..<n {
+            if a > 0 && nums[a] == nums[a - 1] {
+                continue
+            }
+            var c = n - 1
+            let target = -nums[a]
+            for b in a + 1..<n {
+                if b > a + 1 && nums[b] == nums[b - 1] {
+                    continue
+                }
+                while b < c && nums[b] + nums[c] > target {
+                    c = c - 1
+                }
+                if b == c {
+                    break
+                }
+                if nums[b] + nums[c] == target {
+                    result.append([nums[a],nums[b],nums[c]])
+                }
+            }
+        }
+        return result
+    }
+}

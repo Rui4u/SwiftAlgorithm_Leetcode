@@ -12,7 +12,7 @@ class _5_最长回文子串 {
     func longestPalindrome(_ s: String) -> String {
         /// 建立二维数组   i 为行  j 为列     i表示左侧index  j表示有测index
         ///  dp[i][j] =  dp[i + 1][j - 1] && s[i] == s[j]   因为用到j-1 所以先用列排
-        ///   j - 1 - (i + 1) + 1 < 2   abc  ij是ac的情况
+        ///   j - 1 - (i + 1) + 1 < 2   aba  ij是aa的情况
         ///
         var maxLenth = 1
         var begin = 0
@@ -37,6 +37,7 @@ class _5_最长回文子串 {
                 }
             }
         }
+
         return sArray[begin..<begin + maxLenth].joined()
     }
 }
